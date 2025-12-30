@@ -1,9 +1,9 @@
 #primeiro pressionamos ctrl + shift + p para mudar para o python 3.11
-#pip install -U langchain-community
-#pip install langchain==0.3.0 ok
-#pip install langchain-core==0.3.1
-#pip install langchain-groq==0.2.0 pypdf
-#pip install langchain-community==0.3.0
+#py install -U langchain-community
+#py install langchain==0.3.0 ok
+#py install langchain-core==0.3.1
+#py install langchain-groq==0.2.0 pypdf
+#py install langchain-community==0.3.0
 
 import os
 from langchain_groq import ChatGroq 
@@ -14,7 +14,7 @@ from langchain_community.document_loaders import PyPDFLoader
 os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
 chat = ChatGroq(model = 'llama-3.3-70b-versatile')
 
-pdf_path = r'C:\Users\Caio Santos\Desktop\Python\AZIMOV\pdf_load\doc.pdf' #digitar a localização do arquivo em pdf
+pdf_path = r'C:\Users\caio_\OneDrive\Desktop\buscando_informacoes_no_pdf_com_IA\doc.pdf' #digitar a localização do arquivo em pdf
 
 loader = PyPDFLoader(pdf_path)
 lista_documentos = loader.load()
